@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        body {
+            font-family: Poppins;
+        }
+        .custom-navbar {
+            padding: 40px 50px 50px 50px;
+            width: 100vw;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #BEBEBE;
+        }
+        .left-list {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            font-size: 25px;
+            font-weight: bold;
+            width: 17%;
+        }
+        .right-list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40% !important;
+        }
+        .item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+            border-bottom: 2px solid #BEBEBE;
+        }
+        .item-1:hover,
+        .item-2:hover,
+        .item-3:hover,
+        .item-4:hover,
+        .item-5:hover,
+        .item-6:hover {
+            border-bottom: 2px solid #27C5FF;
+        }
+        .custom-navbar .btn-primary{
+            background-color: white;
+            border: none;
+        }
+        .custom-navbar .btn-primary img{
+            height: 29px;
+        }
+        .custom-navbar .btn-primary:hover{
+            background-color: white;
+        }
+        .text{
+            position: relative;
+            font-size: 40px;
+            font-weight: bold;
+            color: #0b3dc6;
+        }
+        .first-text{
+            color: black;
+        }
+        .text-container{
+            width: 30vw;
+            margin-top: 93px;
+            margin-left: 50px;
+        }
+        .second-text::before{
+            content: "";
+            position: absolute;
+            top: 70px;
+            left: -237px;
+            height: 39%;
+            width: 388%;
+            background-color: white;
+            border-left: 2px solid #0b3dc6;
+            animation: animate 3s steps(16) infinite;
+        }
+        @keyframes animate{
+            40%,60%{
+                left: 100%;
+            }
+            100%{
+                left: -237px;
+            }
+        }
+        .tagline{
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 26px;
+        }
+        .news-grid-one{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            width: 55vw;
+        }
+        .card{
+            place-self: center;
+            transition: transform 0.6s ease;
+        }
+        .card:hover{
+            transform: translateY(-20px);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        .introduce-part{
+            display: flex;
+            justify-content: space-between;
+        }
+        .trending-header{
+            font-size: 25px;
+            font-weight: 500;
+            padding: 15px;
+            margin-left: 73px;
+            width: 30vw;
+            color: rgb(215, 56, 56);
+        }
+        .news-grid-two{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            margin-top: 40px;
+        }
+        .explore-more{
+            width: 100vw;
+            display: flex;
+        }
+        .explore-more-left{
+            width: 70%;
+        }
+        .explore-more-right{
+            width: 30%;
+            display: flex;
+        }
+        .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: rgb(32, 27, 27);
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: start;
+}
+
+.img {
+  place-self: center;
+}
+
+.img img {
+  border-radius: 20%;
+  max-width: 100px;
+}
+
+.contact-us, .links, .follow-us {
+  text-align: center;
+}
+
+.contact-us section {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.links ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links ul li {
+  padding: 5px 0;
+  color: white;
+}
+
+.follow-us ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.follow-us ul li img {
+  height: 30px;
+  margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+  }
+
+  .img {
+      grid-column: span 2;
+  }
+
+  .contact-us, .links, .follow-us {
+      text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+  }
+
+  .img img {
+      max-width: 80px;
+  }
+
+  .contact-us section {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .links ul {
+      padding: 0;
+  }
+
+  .links ul li {
+      text-align: center;
+      padding: 5px 0;
+  }
+
+  .follow-us ul {
+      flex-direction: row;
+      gap: 10px;
+  }
+
+  .follow-us ul li img {
+      margin: 5px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+  
+    </style>
+</head>
+<body>
+    <div class="custom-navbar">
+        <div class="left-list"> <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="icon.svg" alt=""></button>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Welcome to Anti-Doping</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>Ensuring a dopefree environment for athletes and sports</p>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white; color: black; border: none;">
+                      Results management
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Antidoping rules violation</a></li>
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Sanctions under article 10.8</a></li>
+                      <li><a class="dropdown-item" href="#">UNESCO international convention</a></li>
+                    </ul>
+                  </div>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white; color: black; border: none;">
+                      Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Prohibited list</a></li>
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">National antidoping rules</a></li>
+                      <li><a class="dropdown-item" href="#">UNESCO international convention</a></li>
+                    </ul>
+                  </div>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white; color: black; border: none;">
+                      Athlete Testing
+                    </a>
+                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">In-competetion</a></li>
+                      <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Out-competetion</a></li>
+                      <li><a class="dropdown-item" href="#">Rights and Responsibilities</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Awareness and health risks</a></button>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Antidoping Disciplinary panel</a></button>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Educational videos</a></button>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index-tue.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Therapeutic Use Exemption</a></button>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="https://docs.google.com/forms/d/1IpUZLCEWSLM-SlGfUqPGC4GBnnVWrfMVqBVOrTHXGHk/edit" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Report And Feedback</a></button>
+                  </div>
+              </div>
+            </div>DopingDefiance <a href="https://nadaindia.yas.gov.in/" style="margin-left: 30px;">
+                <img width="180" height="45" src="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png" class="attachment-large size-large wp-image-6456" alt="" srcset="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png 1024w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-300x89.png 300w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-768x229.png 768w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1536x458.png 1536w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1.png 1730w" sizes="(max-width: 800px) 100vw, 800px"></a></div>
+                <div class="right-list">
+                  <div class="item-1"><a href="index.html">HOME</a></div>
+                  <div class="item-2"><a href="index_about.html">ABOUT</a></div>
+                  <div class="item-3"><a href="index_edu.html">EUDCATION</a></div>
+                  <div class="item-4"><a href="index_blog.html">BLOG</a></div>
+                  <div class="item-5"><a href="index_news.html">NEWS</a></div>
+              </div>
+    </div>
+    <div class="introduce-part">
+        <div class="text-container">
+            <span class="text first-text">Welcome To The BlogPage of</span>
+            <span class="text second-text">DopingDefiance</span>
+            <div class="tagline">Promoting Integrity in sports : Explore Insights on Anti-Doping</div>
+        </div>
+        <div class="trending-part" style="width: 50%;">
+            <div class="trending-header">Explore Latest And Trending Blogs...</div>
+            <div class="news-grid-two">
+                <div class="card card-one" style="width: 18rem;">
+                    <img src="img4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                <div class="card card-two" style="width: 18rem;">
+                    <img src="img4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+    </div>
+    <div class="explore-tagline" style="height: 10vh; margin-left: 180px; font-size: 28px; color: rgb(215, 56, 56);">Explore More...</div>
+    <div class="explore-more">
+        <div class="explore-more-left" style="height: 100vh">
+                <div class="news-grid-two" style="width: 100%;">
+                    <div class="card card-one" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="news-grid-two" style="width: 100%;">
+                    <div class="card card-one" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="news-grid-two" style="width: 100%;">
+                    <div class="card card-one" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="news-grid-two" style="width: 100%;">
+                    <div class="card card-one" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                    <div class="card card-two" style="width: 18rem;">
+                        <img src="img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                      </div>
+                </div>
+        </div>
+        <div class="explore-more-right" style="display: flex; flex-direction: column;">
+            <div class="card card-two" style="width: 14rem; height: 400px; margin-top: 50px;">
+                <img src="img4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            <div class="card card-two" style="width: 14rem; height: 400px; margin-top: 50px;">
+                <img src="img4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            <div class="card card-two" style="width: 14rem; height: 400px; margin-top: 50px;">
+                <img src="img4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            <div class="card card-two" style="width: 14rem; height: 400px; margin-top: 50px;">
+                <img src="img4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+          <div class="img" style="background-color: white; border-radius: 20px; width: 150px; text-align: center;"><img src="th.jpg" alt=""></div>
+          <div class="contact-us">
+              <h2 class="fifth-h2" style="color: white; margin: auto;">Contact Us</h2>
+              <section ><span style="color: white; width: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, vero.</span></section>
+              <section><span style="color: white;">+91-11-24368274</span></section>
+              <section class="mail"><span style="color: white;">info[dot]nada[at]nic[dot]in</span></section>
+          </div>
+          <div class="links" style="text-align: center;">
+              <h2 class="sixth-h2" style="color: white; margin: auto;">Links</h2>
+              <ul style="text-align: center;">
+                <li style="color: white; list-style-type: none;"><a href="index.html" style="color: white;">HOME</a></li>
+                <li style="color: white; list-style-type: none;"><a href="index_about.html">About</a></li>
+                <li style="color: white; list-style-type: none;"><a href="index_testing.html" style="color: white;">Athlete Testing</a></li>
+                <li style="color: white; list-style-type: none;"><a href="https://www.wada-ama.org/en/prohibited-list#search-anchor" style="color: white;">Prohibited Substances</a></li>
+                <li style="color: white; list-style-type: none;"><a href="index_edu.html">Education and awareness</a></li>
+                <li style="color: white; list-style-type: none;"><a href="index-tue.html" style="color: white;">TUE</a></li>
+            </ul>
+          </div>
+          <div class="follow-us" style="text-align: center;">
+              <h2 class="seventh-h2" style="color: white; margin: auto;">Follow Us</h2>
+              <ul style="display: flex; margin: 58px 0 0 43px;">
+                  <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="fb.svg" alt=""></li>
+                  <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="insta.svg" alt=""></li>
+                  <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="twitter.svg" alt=""></li>
+                  <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="tr.svg" alt=""></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
