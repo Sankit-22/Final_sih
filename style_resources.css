@@ -1,0 +1,361 @@
+/* General styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Navigation bar styling */
+.custom-navbar {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 2px solid #BEBEBE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left list */
+.left-list {
+  display: flex;
+  align-items: center;
+}
+
+.left-list button {
+  border: none;
+  cursor: pointer;
+}
+
+.left-list img {
+  height: 25px;
+  margin-left: 10px;
+}
+
+/* Right list */
+.right-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.right-list .item-1,
+.right-list .item-2,
+.right-list .item-3,
+.right-list .item-4,
+.right-list .item-5,
+.right-list .item-6 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.right-list .item-1:hover,
+.right-list .item-2:hover,
+.right-list .item-3:hover,
+.right-list .item-4:hover,
+.right-list .item-5:hover,
+.right-list .item-6:hover {
+  border-bottom: 2px solid #27C5FF;
+  color: #27C5FF;
+}
+
+/* Hero image styling */
+.img1 {
+  margin-top: 60px; /* Space for fixed navbar */
+  width: 100%;
+  position: relative;
+}
+
+.img1 img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.img1 .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  font-size: 8vw; /* Responsive font size */
+  text-align: center;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Media Queries */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .right-list {
+      display: none; /* Hide menu items on smaller screens */
+  }
+
+  .left-list {
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .custom-navbar {
+      padding: 10px 15px;
+  }
+
+  .img1 .text {
+      font-size: 12vw; /* Adjust text size for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .left-list button img {
+      height: 20px;
+  }
+
+  .img1 .text {
+      font-size: 16vw; /* Adjust text size for very small screens */
+  }
+}
+
+
+
+/* Reset */
+
+ /* General Fix for Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Carousel Container */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 20px auto;
+    overflow: hidden; /* Ensures no part of the next/previous images is visible */
+    border-radius: 10px;
+    padding: 20px 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* Add a background color for contrast */
+    margin-bottom: 50px;
+  }
+  
+  /* Carousel Heading */
+  .carousel-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  /* Carousel */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    width: calc(100% * 15); /* Dynamically match the number of images */
+    overflow: hidden; /* Prevent images from bleeding out */
+    gap: 20px; /* Gap between images */
+    justify-content: flex-start; /* Keep images in their positions */
+    align-items: center;
+  }
+  
+  .carousel img {
+    
+    width: 410px;
+    height: 400px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain image aspect ratio, crop excess */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  .prev-btn  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .next-btn  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel img {
+      flex: 0 0 100%; /* Show 1 image at a time on smaller screens */
+      height: auto; /* Adjust height dynamically */
+    }
+  }
+
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: rgb(32, 27, 27);
+    position: relative;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.img {
+    place-self: center;
+}
+
+.img img {
+    border-radius: 20%;
+    max-width: 100px;
+}
+
+.contact-us, .links, .follow-us {
+    text-align: center;
+}
+
+.contact-us section {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.links ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.links ul li {
+    padding: 5px 0;
+    color: white;
+}
+
+.follow-us ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.follow-us ul li img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+    .img {
+        grid-column: span 2;
+    }
+
+    .contact-us, .links, .follow-us {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .img img {
+        max-width: 80px;
+    }
+
+    .contact-us section {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .links ul {
+        padding: 0;
+    }
+
+    .links ul li {
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .follow-us ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .follow-us ul li img {
+        margin: 5px 0;
+    }
+}
+
+a {
+  text-decoration: none;
+}
+
+  
+  
+  

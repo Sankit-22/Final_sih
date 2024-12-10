@@ -1,0 +1,459 @@
+.custom-navbar {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 2px solid #BEBEBE;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left list */
+  .left-list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-list button {
+    
+    border: none;
+    cursor: pointer;
+  }
+  
+  .left-list img {
+    height: 25px;
+    margin-left: 10px;
+  }
+  
+  /* Right list */
+  .right-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    list-style-type: none;
+  }
+  
+  .right-list .item-1,
+  .right-list .item-2,
+  .right-list .item-3,
+  .right-list .item-4,
+  .right-list .item-5,
+  .right-list .item-6 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .right-list .item-1:hover,
+  .right-list .item-2:hover,
+  .right-list .item-3:hover,
+  .right-list .item-4:hover,
+  .right-list .item-5:hover,
+  .right-list .item-6:hover {
+    border-bottom: 2px solid #27C5FF;
+    color: #27C5FF;
+  }
+  
+  /* Hero image styling */
+  .img1 {
+    margin-top: 60px; /* Space for fixed navbar */
+    width: 100%;
+    position: relative;
+  }
+  
+  .img1 img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+  
+  .img1 .text {
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 8vw; /* Responsive font size */
+    text-align: center;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Media Queries */
+  
+  /* For tablets and smaller devices */
+  @media (max-width: 768px) {
+    .right-list {
+        display: none; /* Hide menu items on smaller screens */
+    }
+  
+    .left-list {
+        justify-content: space-between;
+        width: 100%;
+    }
+  
+    .custom-navbar {
+        padding: 10px 15px;
+    }
+  
+    .img1 .text {
+        font-size: 12vw; /* Adjust text size for smaller screens */
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 480px) {
+    .left-list button img {
+        height: 20px;
+    }
+  
+    .img1 .text {
+        font-size: 16vw; /* Adjust text size for very small screens */
+    }
+  }
+
+.text-body-emphasis {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px; /* Add margin to ensure it doesn't stick directly to the image */
+}
+
+
+.vision-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vision-container {
+    display: flex;
+    justify-content: space-between; /* Aligns the two containers with space between them */
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .vision-content,
+  .mission-content {
+    flex: 1; /* Makes both sections take up equal space */
+    margin: 0 20px; /* Adds spacing between the two containers */
+  }
+  
+  .vision-title,
+  .mission-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .mission-title {
+    color: #e63946; /* Bright red for emphasis */
+  }
+  
+  .vision-text,
+  .mission-text {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+  
+  .mission-text {
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vision-container {
+      flex-direction: column; /* Stacks the containers vertically on smaller screens */
+      align-items: center;
+      text-align: center;
+    }
+  
+    .vision-content,
+    .mission-content {
+      margin: 20px 0;
+    }
+  
+    .vision-title,
+    .mission-title {
+      font-size: 2rem;
+    }
+  
+    .vision-text,
+    .mission-text {
+      font-size: 1rem;
+    }
+  }
+
+
+  .what-we-do {
+    background-color:#BEBEBE;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .text-content {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .dropdown-container {
+    flex: 1;
+  }
+  
+  .dropdown-item {
+    margin-bottom: 15px;
+  }
+  
+  .dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #3939e6;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-btn:hover {
+    color: #b22234;
+  }
+  
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 0 10px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content p {
+    margin: 10px 0;
+  }
+  
+  .dropdown-content.open {
+    max-height: 150px; /* Adjust as needed */
+    padding: 10px;
+  }
+
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: rgb(32, 27, 27);
+    position: relative;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+  }
+  
+  .img {
+    place-self: center;
+  }
+  
+  .img img {
+    border-radius: 20%;
+    max-width: 100px;
+  }
+  
+  .contact-us, .links, .follow-us {
+    text-align: center;
+  }
+  
+  .contact-us section {
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .links ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .links ul li {
+    padding: 5px 0;
+    color: white;
+  }
+  
+  .follow-us ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+  }
+  
+  .follow-us ul li img {
+    height: 30px;
+    margin: 0 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+  
+    .img {
+        grid-column: span 2;
+    }
+  
+    .contact-us, .links, .follow-us {
+        text-align: center;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+  
+    .img img {
+        max-width: 80px;
+    }
+  
+    .contact-us section {
+        text-align: center;
+        margin: 10px 0;
+    }
+  
+    .links ul {
+        padding: 0;
+    }
+  
+    .links ul li {
+        text-align: center;
+        padding: 5px 0;
+    }
+  
+    .follow-us ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+  
+    .follow-us ul li img {
+        margin: 5px 0;
+    }
+  }
+  
+  #carouselExample {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px auto;
+    height: 65vh;
+    width: 60vw;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 290px;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures images are properly scaled */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; /* Align vertically in the middle of the carousel */
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure buttons are above the carousel images */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+    border-radius: 50%; /* Make buttons circular */
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev {
+    left: -50px; /* Adjust position to the left */
+}
+
+.carousel-control-next {
+    right: -50px; /* Adjust position to the right */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Make the icons white for better visibility */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+a {
+  text-decoration: none;
+  
+}

@@ -1,0 +1,620 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* General styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Navigation bar styling */
+.custom-navbar {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 2px solid #BEBEBE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left list */
+.left-list {
+  display: flex;
+  align-items: center;
+}
+
+.left-list button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.left-list img {
+  height: 25px;
+  margin-left: 10px;
+}
+
+/* Right list */
+.right-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.right-list .item-1,
+.right-list .item-2,
+.right-list .item-3,
+.right-list .item-4,
+.right-list .item-5,
+.right-list .item-6 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.right-list .item-1:hover,
+.right-list .item-2:hover,
+.right-list .item-3:hover,
+.right-list .item-4:hover,
+.right-list .item-5:hover,
+.right-list .item-6:hover {
+  border-bottom: 2px solid #27C5FF;
+  color: #27C5FF;
+}
+
+/* Hero image styling */
+.img1 {
+  margin-top: 60px; /* Space for fixed navbar */
+  width: 100%;
+  position: relative;
+}
+
+.img1 img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.img1 .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  font-size: 8vw; /* Responsive font size */
+  text-align: center;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Media Queries */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .right-list {
+      display: none; /* Hide menu items on smaller screens */
+  }
+
+  .left-list {
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .custom-navbar {
+      padding: 10px 15px;
+  }
+
+  .img1 .text {
+      font-size: 12vw; /* Adjust text size for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .left-list button img {
+      height: 20px;
+  }
+
+  .img1 .text {
+      font-size: 16vw; /* Adjust text size for very small screens */
+  }
+}
+
+
+.text-body-emphasis {
+    font-size: 60px;
+}
+#pg {
+    font-size: 30px;
+    color: rgb(143, 145, 145);
+}
+  /* Hover effect for boxes */
+  .col1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);;
+  }
+
+  /* Hover effect for buttons */
+  .btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    .row1 {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .col1 {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .col1 {
+      width: 100% !important;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+    .icon-square {
+      width: 50px;
+      height: 50px;
+    }
+    h4.fs-2 {
+      font-size: 18px;
+    }
+    .btn {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+    .btn-primary:hover {
+        background-color: #004085;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(13, 110, 253, 0.3);
+        }
+      
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Main container styling */
+/* Main Container */
+.main-div {
+    width: 100%;
+    max-width: 1600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
+  }
+  
+  /* Heading styling */
+  .heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* Flex container for sub-divs */
+  .sub-divs {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures sub-divs stack on smaller screens */
+  }
+  
+  /* Individual sub-div styling */
+  .sub-div {
+    flex: 1 1 calc(45% - 20px); /* Allows sub-divs to take 45% width with spacing */
+    min-width: 250px; /* Ensures a minimum size for small screens */
+    height: 130px;
+    padding: 15px;
+    background-color: #2d2d2d;
+    border: 3px solid #fcb400;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    overflow: hidden;
+  }
+  
+  /* Sub2-div inside sub-div */
+  .sub2-div {
+    padding: 10px;
+    border: 0.5px solid goldenrod;
+    border-radius: 10px;
+    height: 165px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Hover effect on sub2-div */
+  .sub2-div:hover {
+    height: 470px; /* Expands sub-div on hover */
+  }
+  
+  /* Styling for text inside sub-div */
+  .sub-div p {
+    margin: 0;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  /* Hidden text inside sub-div */
+  .hidden-text {
+    display: none;
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #ffc107; /* Highlighted color for hidden text */
+  }
+  
+  /* On hover: sub-div expands */
+  .sub-div:hover {
+    height: 430px; /* Double the initial height */
+  }
+  
+  /* On hover: show hidden text */
+  .sub-div:hover .hidden-text {
+    display: block; /* Hidden text becomes visible */
+    animation: fadeIn 0.3s ease-in-out; /* Optional fade-in effect */
+  }
+  
+  /* Keyframe animation for fading in text */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sub-divs {
+      flex-direction: column; /* Stack sub-divs vertically */
+      align-items: center;
+    }
+  
+    .sub-div {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    /* When hovering, adjust the height for smaller screens */
+    .main-div:hover {
+      max-height: 600px; /* Ensure the height doesn't grow too much on smaller screens */
+    }
+  
+    .sub-div:hover {
+      height: 300px; /* Adjust the hover size for sub-divs on small screens */
+    }
+  }
+
+
+
+
+  /* Styling for the main container */
+.main3-div {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the sub-sub-div container */
+.sub32-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for each sub-sub-div */
+.sub-sub-div {
+    background-color: #2c2c2c;
+    border: 2px solid #fcb400;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Ensures the hidden text stays within bounds */
+    height: 70px; /* Initial height */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+}
+
+/* Styling for the main visible text */
+.main-text1 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Styling for the hidden text */
+.hidden-text1 {
+    font-size: 0.9rem;
+    color: #fcb400;
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    opacity: 0; /* Set opacity to 0 for smooth transition */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+}
+
+/* Show hidden text on hover */
+.sub-sub-div:hover .hidden-text1 {
+    display: block; /* Make the hidden text visible */
+    opacity: 1; /* Fade in the text */
+}
+
+/* Optional: Add some hover effect to expand the div */
+.sub-sub-div:hover {
+    background-color: #333; /* Darken background color on hover */
+    border-color: #ffcc00; /* Change border color on hover */
+    height: 450px; /* Expand the height smoothly */
+}
+
+
+
+.dropdown-container {
+  display: flex; /* Arrange items in a row */
+  gap: 20px; /* Spacing between dropdowns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Dropdown Component */
+.dropdown {
+  width: 320px; /* Fixed width for consistent layout */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white; /* Clean white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown:hover {
+  transform: translateY(-4px); /* Slight elevation effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Header */
+.dropdown-header {
+  background-color: #ffffff;
+  color: #333333; /* Darker text for better contrast */
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-header:hover {
+  background-color: #f8f9fa; /* Slightly lighter background for hover */
+  color: #007bff; /* Accent color for hover */
+}
+
+/* Dropdown Header Arrow */
+.dropdown-header .arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease, color 0.2s ease;
+  color: #666666;
+}
+
+.dropdown.open .dropdown-header .arrow {
+  transform: rotate(180deg); /* Flip arrow on open */
+  color: #007bff; /* Match accent color */
+}
+
+/* Dropdown Body */
+.dropdown-body {
+  background-color: #ffffff;
+  color: #555555; /* Softer text color */
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Open Dropdown */
+.dropdown.open .dropdown-body {
+  max-height: 500px; /* Dynamic height based on content */
+  opacity: 1;
+  padding: 15px 20px; /* Add padding smoothly */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dropdown-container {
+      flex-wrap: wrap; /* Wrap items to the next row on smaller screens */
+      gap: 15px;
+  }
+  .dropdown {
+      width: 100%; /* Full width for smaller screens */
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: rgb(32, 27, 27);
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: start;
+}
+
+.img {
+  place-self: center;
+}
+
+.img img {
+  border-radius: 20%;
+  max-width: 100px;
+}
+
+.contact-us, .links, .follow-us {
+  text-align: center;
+}
+
+.contact-us section {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.links ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links ul li {
+  padding: 5px 0;
+  color: white;
+}
+
+.follow-us ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.follow-us ul li img {
+  height: 30px;
+  margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+  }
+
+  .img {
+      grid-column: span 2;
+  }
+
+  .contact-us, .links, .follow-us {
+      text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+  }
+
+  .img img {
+      max-width: 80px;
+  }
+
+  .contact-us section {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .links ul {
+      padding: 0;
+  }
+
+  .links ul li {
+      text-align: center;
+      padding: 5px 0;
+  }
+
+  .follow-us ul {
+      flex-direction: row;
+      gap: 10px;
+  }
+
+  .follow-us ul li img {
+      margin: 5px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+  
+  
+  
+  
+  
+ 
+  
+
